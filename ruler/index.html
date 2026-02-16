@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruler Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ruler Generator</h1>
+        <label for="startCm">Starting unit in CM:</label>
+        <input type="number" id="startCm" value="0">
+        <button id="generatePdf">Generate PDF</button>
+
+        <div id="rulerPreview" class="ruler-preview">
+            <!-- Rulers will be generated here for preview -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
