@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const PAGE_WIDTH_POINTS = 792; // 11 inches for landscape
     const PAGE_HEIGHT_POINTS = 612; // 8.5 inches for landscape
 
-    // Adjusted: 1 cm = approx 29.5276 points to correct 25cm printing as 24cm (28.3465 * 25/24)
-    const CM_TO_POINTS = 29.5276;
+    // 1 cm = approx 28.3465 points (at 72 DPI)
+    const CM_TO_POINTS = 28.3465;
 
     // Ruler dimensions
     const RULER_LENGTH_CM = 25;
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Margin from the edge of the page
     const MARGIN_POINTS = 36; // 0.5 inch margin
 
-    const RULER_WIDTH_POINTS = RULER_LENGTH_CM * CM_TO_POINTS; // Calculated width for RULER_LENGTH_CM in points
+    const RULER_WIDTH_POINTS = RULER_LENGTH_CM * CM_TO_POINTS; // 20cm in points
 
     function createRulerSVG(startValueCm) {
         const svgWidth = RULER_WIDTH_POINTS; // Corresponds to 20cm
