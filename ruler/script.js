@@ -186,6 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(`Ruler ${i + 1} added as image to PDF.`);
             }
 
+            doc.setFontSize(8);
+            doc.text('Author: Zicong', MARGIN_POINTS, PAGE_HEIGHT_POINTS - MARGIN_POINTS - 10);
+            doc.text('Please print without scaling.', MARGIN_POINTS, PAGE_HEIGHT_POINTS - MARGIN_POINTS);
+
             console.log('All rulers added to PDF. Attempting to save...');
             doc.save('rulers.pdf');
             console.log('PDF save initiated.');
